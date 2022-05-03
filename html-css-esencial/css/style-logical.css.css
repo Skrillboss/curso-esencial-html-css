@@ -1,0 +1,301 @@
+/* selector global le dara estilo a todos los elementos*/
+/*  * {color: red;}  */
+
+/* selector de etiqueta le da estilo a una etiqueta en especifico */
+/* h1 {color: red} */
+
+/*selector de clase necesita de un atributo llamado class, luego en css
+puedes ponerles tantas clases a un mismo elemento html*/
+/*
+<style>
+ .title {color: red;}
+</style>
+
+<h1 class="title">hola mundo</h1>
+*/
+
+/*selector de id, solo puede haber un id por cada elemento*/
+/* <style>
+#title {color: red;}
+</style>
+<h1 id="title">hola mundo</h1> */
+
+/* :pseudoclase o pseudo elementos */
+/* <style>
+ h1:hover {color: red;}
+</style>
+<h1>hola mundo</h1>*/
+
+/* header {
+  background: red;
+  width: 80vw;
+ height: ;
+} */
+
+  /* @font-face {
+  font-family: charter;
+  src: ("../fonts/charter-regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: ("../fonts/charter-italic.otf");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: ("../fonts/charter-bold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: charter;
+  src: ("../fonts/charter-bold-italic.otf);
+  font-style: normal;
+  font-weight: bold;
+} */
+
+:root {font-size: 18px;
+  --white30: white;
+  --white20: #A5A3A5;
+  --white10: #3A3539;
+}
+
+body {color: var(--white30);
+font-family: 'nunito', sans-serif;
+background: #251F24;
+ /* font-family: charter; */
+}
+
+a {color: var(--white30);}
+
+.header {
+  /* position: sticky;
+  inset-block-start: -45px; */
+
+}
+
+.header-content {
+  /* position: relative */
+  padding-inline: 20px;
+}
+
+header {font-size: 14px;
+  color: var(--white);
+  margin-block-start: 20px;
+/* position: absolute; */
+/* inset-block-start: 0;
+inset-inline-start: -188px;
+inline-size: 188px;
+inset-block-start: 80px; */
+}
+
+header li {
+   margin-block-end: 16px;
+  color: var(--white20);}
+
+header a {font-size: 14px; color: var(--white10);
+text-decoration: none;}
+
+header a:hover {color: var(--white30);}
+
+header details summary {font-weight: bold;}
+
+h1 {
+  font-size: 60px;
+margin-block-start: 15px;
+margin-block-end: 16px;
+}
+
+
+h2 {
+  margin-block: 40px;
+  font-size: 2em;}
+
+h3 {
+  margin-block: 16px;
+  font-weight: 600;
+  font-size: 1.5em;}
+
+hr {
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
+  border-radius: 8px;
+}
+
+pre {
+  background: var(--white10);
+  padding: 40px;
+  overflow: auto;
+border: 10px solid #5551ff;
+box-shadow: -10px 10px 0 0 #ABAAF6;
+margin-block-end: 30px;
+border-start-start-radius: 60px;
+}
+
+p {
+  padding: 40px;
+  color: var(--white20)
+}
+
+.hero {
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  /* background-image: linear-gradient(to top, rgba(255, 251, 251, 0.3), transparent), url(../images/pattern.png); */
+height: 50px;
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+  max-inline-size: 100%;
+}
+
+.section-content {
+  counter-reset: titlelist;
+}
+
+.section-content h3 {
+  counter-increment: titlelist;
+}
+
+.section-content h3::before{
+content: counter(titlelist, decimal) ". ";
+}
+
+
+/* .section-content h3::after {
+ content: "";
+ width: 93px;
+ height: 4px;
+ background: var(--white30);
+ display: inline-block;
+} */
+
+blockquote {
+  line-height: 32px;
+  font-size: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
+  background: var(--white10);
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  border-radius: 8px;
+}
+
+blockquote p {
+  color: var(--white30);
+}
+
+.main hr {
+  display: none;
+}
+
+.wrapper {
+  /* border: 1px solid yellow; */
+  max-inline-size: 902px;
+  margin: auto
+
+}
+
+.main-content {
+  padding: 16px;
+  /* border: 1px solid blue; */
+}
+
+.slider {
+  /* border: 1px solid red; */
+}
+
+.slider-continer {
+  /* block-size: 100px; */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  /* border: 1px solid purple; */
+}
+
+.video {
+  margin: 0;
+  /* border: 1px solid blue; */
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  text-align: center;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: white;
+border-radius: 50%;
+}
+
+.slider-bullet:hover {
+  border: 3px solid black;
+}
+
+form input {
+border: 1px solid var(--white30);
+box-sizing: border-box;
+inline-size: 100%;
+background: #251F24;
+border-radius: 8px;
+margin-block-end: 24px;
+padding-inline: 16px;
+padding-block: 12px;
+color: var(--white30);
+font-size: 16px;
+}
+
+form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+}
+
+form input::-webkit-input-placeholder {
+  color: var(--white20);
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+
+  }
+
+  .header-content {
+    position: relative
+  }
+
+  header {
+    /* font-size: 14px; */
+    /* color: var(--white); */
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -188px;
+    inline-size: 188px;
+    inset-block-start: 80px;
+  }
+
+  .hero {
+    height: 350px;
+  }
+
+  h1 {
+    margin-block-start: 64px;
+  }
+
+}
